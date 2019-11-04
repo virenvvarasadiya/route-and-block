@@ -2,8 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:route/main.dart';
+import 'package:route/listbloc/home.dart';
 
-class routeGenerator{
+class RouteGeneratorCustome{
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     
@@ -12,6 +13,9 @@ class routeGenerator{
     switch(settings.name){
 
       case '/':
+        return MaterialPageRoute(builder: (_) => Home() );
+
+      case '/home':
         return MaterialPageRoute(builder: (_) => MyHomePage() );
 
       case '/second':
